@@ -181,7 +181,7 @@ if defined activate goto _activate
 :MainMenu
 
 cls
-title  IDM Activation v1 - Piash
+title  IDM Activation v2 - Piash
 mode 90, 30
 
 :: Check firewall status
