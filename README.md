@@ -74,5 +74,30 @@ _________________________________
 
      - If you are still facing any issues, please contact me (mentioned below in this page).
 
+____________________________________________________________________________________________________
+ 
+AUTHORS::
+____________________________________________________________________________________________________
 
+   @Dukun Cabul        - Original researcher of this IDM trial reset and activation logic,
+                         made an Autoit tool for these methods, IDM-AIO_2020_Final
+                     
+   @WindowsAddict 	   - Ported the above Autoit tool to batch script
+
+   @AveYo aka @BAU     - Snippet to set registry ownership and permission recursively
+
+   @abbodi1406         - Awesome batch script tricks and help
+
+   @dbenham            - Set buffer height independently of window height
+
+   @piash_EEE          - Add and fix some missing features.
+
+
+_________________________________
+
+   IDM Activation Script
+ 
+   Homepage:	https://github.com/lstprjct/IDM-Activation-Reset
+ 
+   Email:		saqibpiash@gmail.com
 ____________________________________________________________________________________________________
