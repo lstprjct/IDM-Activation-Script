@@ -99,5 +99,5 @@ _________________________________
  
    Homepage:	https://github.com/lstprjct/IDM-Activation-Reset
  
-   Email:		saqibpiash@gmail.com
+   Telegram:	@piash_EEE
 ____________________________________________________________________________________________________
