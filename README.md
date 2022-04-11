@@ -1,7 +1,7 @@
 # IDM-Activation-Reset
 _________________________________
 
-   Activation:
+###   Activation:
 _________________________________
 
  - This script applies registry lock method to activate Internet download manager (IDM).
@@ -15,7 +15,7 @@ _________________________________
 
 _________________________________
 
-   Reset IDM Activation / Trial:
+###   Reset IDM Activation / Trial:
 _________________________________
 
  - Internet download manager provides 30 days trial period, you can use this script to 
@@ -26,14 +26,14 @@ _________________________________
 
 _________________________________
 
-   OS requirement:
+###   OS requirement:
 _________________________________
 
- - Project is supported only for Windows 7/8/8.1/10 and their Server equivalent.
+ - Project is supported only for Windows 7/8/8.1/10/11 and their Server equivalent.
 
 _________________________________
 
- - Advanced Info:
+### - Advanced Info:
 _________________________________
 
    - To add a custom name in IDM license info, edit the line number 5 in the script file.
@@ -51,7 +51,7 @@ Possible accepted values,
 
 _________________________________
 
- - Troubleshooting steps:
+### - Troubleshooting steps:
 _________________________________
 
    - If any other activator was used to activate IDM previously then make sure to properly
@@ -75,29 +75,31 @@ _________________________________
      - If you are still facing any issues, please contact me (mentioned below in this page).
 
 ____________________________________________________________________________________________________
- 
-AUTHORS::
+
+###   Credits:
 ____________________________________________________________________________________________________
 
    @Dukun Cabul        - Original researcher of this IDM trial reset and activation logic,
                          made an Autoit tool for these methods, IDM-AIO_2020_Final
-                     
-   @WindowsAddict 	   - Ported the above Autoit tool to batch script
+                         nsaneforums.com/topic/371047--/?do=findComment&comment=1632062
+                         
+   @WindowsAddict	   - Ported the above Autoit tool to batch script
 
    @AveYo aka @BAU     - Snippet to set registry ownership and permission recursively
+                         pastebin.com/XTPt0JSC
 
    @abbodi1406         - Awesome batch script tricks and help
 
    @dbenham            - Set buffer height independently of window height
+                         stackoverflow.com/a/13351373
 
-   @piash_EEE          - Add and fix some missing features.
-
-
+   @ModByPiash (Me)	   - Add and fix some missing features.
 _________________________________
 
-   IDM Activation Script
+##   IDM Activation Script
  
-   Homepage:	https://github.com/lstprjct/IDM-Activation-Reset
+###   Homepage:   https://www.nsaneforums.com/topic/371047--/?do=findComment^&comment=1578647
  
-   Telegram:	@piash_EEE
+###   Telegram:   https://t.me/ModByPiash
+
 ____________________________________________________________________________________________________
