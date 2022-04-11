@@ -98,7 +98,7 @@ _________________________________
 
 ##   IDM Activation Script
  
-###   Homepage:   https://www.nsaneforums.com/topic/371047--/?do=findComment^&comment=1578647
+###   Forum:   https://www.nsaneforums.com/topic/371047--/?do=findComment^&comment=1578647
  
 ###   Telegram:   https://t.me/ModByPiash
 
