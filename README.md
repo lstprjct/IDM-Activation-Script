@@ -1,4 +1,4 @@
-# IDM-Activation-Reset
+# IDM-Activation-Script
 _________________________________
 
 ###   Activation:
