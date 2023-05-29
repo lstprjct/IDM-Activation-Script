@@ -1,8 +1,6 @@
 @setlocal DisableDelayedExpansion
 @echo off
 
-:: Add custom name in IDM license info, prefer to write it in English and/or numeric in below line after = sign,
-set name=
 
 
 
@@ -416,6 +414,9 @@ call :_add_key
 exit /b
 
 :register_IDM
+
+echo:
+set /p name="What is the name to be registered? "
 
 echo:
 echo Applying registration details...
