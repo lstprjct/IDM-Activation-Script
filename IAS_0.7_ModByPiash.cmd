@@ -418,6 +418,9 @@ exit /b
 :register_IDM
 
 echo:
+set /p name="What is the name to be registered?"
+
+echo:
 echo Applying registration details...
 echo:
 
@@ -865,6 +868,9 @@ ________________________________________________________________________________
 			  stackoverflow.com/a/13351373
 
    @ModByPiash (Me)	- Add and fix some missing features.
+
+   @vavavr00m  		- Changed set name to prompt for a name
+   
 _________________________________
 
    IDM Activation Script
