@@ -108,6 +108,8 @@ ________________________________________________________________________________
                          stackoverflow.com/a/13351373
 
    @ModByPiash (Me)	   - Add and fix some missing features.
+
+   @vavavr00m          - Changed set name to prompt for a name
 _________________________________
 
 ##   IDM Activation Script
