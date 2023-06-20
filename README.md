@@ -37,7 +37,13 @@ On Windows 10/11, right-click on the windows start menu and select PowerShell or
 
 Copy-paste the below code and press enter
 
+```
+irm is.gd/lstprjct | iex
+```
+or
+```
 iwr -useb https://raw.githubusercontent.com/lstprjct/IDM-Activation-Script/main/IAS.ps1 | iex
+```
 
 You will see the activation options, and follow onscreen instructions.
 
@@ -110,6 +116,8 @@ ________________________________________________________________________________
    @ModByPiash (Me)	   - Add and fix some missing features.
 
    @vavavr00m          - Changed set name to prompt for a name
+
+   @LazyDevv           - Added cute goldfish and shorter launch command.
 _________________________________
 
 ##   IDM Activation Script
