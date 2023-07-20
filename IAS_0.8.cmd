@@ -153,7 +153,7 @@ if defined activate goto _activate
 :MainMenu
 
 cls
-title  IDM Activation Script 0.7 - @ModByPiash
+title  IDM Activation Script 0.8 - @ModByPiash
 mode 65, 25
 
 :: Check firewall status
