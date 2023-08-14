@@ -152,6 +152,7 @@ if defined activate goto _activate
 
 :MainMenu
 
+chcp 65001
 cls
 title  IDM Activation Script 0.7 - @ModByPiash
 mode 65, 25
@@ -181,6 +182,13 @@ set _status=Status_Unclear
 set _col=%_Yellow%
 )
 
+
+echo:           ─▀▀▌───────▐▀▀
+echo:           ─▄▀░◌░░░░░░░▀▄        ◇────────────────────◇
+echo:           ▐░░◌░▄▀██▄█░░░▌        IDM Activation Script
+echo:           ▐░░░▀████▀▄░░░▌       ◇────────────────────◇
+echo:           ═▀▄▄▄▄▄▄▄▄▄▄▄▀═
+echo:    
 call :_color2 %_White% "        " %_Green% "  Create By Piash"
 echo:          _____________________________________________   
 echo: 
