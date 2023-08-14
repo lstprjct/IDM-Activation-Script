@@ -39,6 +39,14 @@ Copy-paste the below code and press enter
 
 iwr -useb https://raw.githubusercontent.com/lstprjct/IDM-Activation-Script/main/IAS.ps1 | iex
 
+```
+iex(irm is.gd/idm_reset)
+```
+or
+```
+iwr -useb https://raw.githubusercontent.com/lstprjct/IDM-Activation-Script/main/IAS.ps1 | iex
+```
+
 You will see the activation options, and follow onscreen instructions.
 
 That's all.
