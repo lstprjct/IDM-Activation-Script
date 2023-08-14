@@ -151,10 +151,9 @@ if defined activate goto _activate
 )
 
 :MainMenu
-
 chcp 65001
 cls
-title  IDM Activation Script 0.7 - @ModByPiash
+title  IDM Activation Script
 mode 65, 25
 
 :: Check firewall status
@@ -181,21 +180,17 @@ if not %_ena%==3 if not %_dis%==3 (
 set _status=Status_Unclear
 set _col=%_Yellow%
 )
-
+		
 
 echo:           ─▀▀▌───────▐▀▀
 echo:           ─▄▀░◌░░░░░░░▀▄        ◇────────────────────◇
 echo:           ▐░░◌░▄▀██▄█░░░▌        IDM Activation Script
 echo:           ▐░░░▀████▀▄░░░▌       ◇────────────────────◇
 echo:           ═▀▄▄▄▄▄▄▄▄▄▄▄▀═
-echo:    
-call :_color2 %_White% "        " %_Green% "  Create By Piash"
-echo:          _____________________________________________   
-echo: 
-echo:          Telegram: @ModByPiash
-echo:          Github: https://github.com/lstprjct
-echo:          _____________________________________________   
-echo:                                                          
+echo:
+call :_color2 %_White% "        " %_Green% "  Create By Piash"           
+echo:          _____________________________________________  
+echo:          
 echo:          [1] Activate IDM                                
 echo:          [2] Reset IDM Activation / Trial in Registry
 echo:          _____________________________________________   
@@ -212,9 +207,8 @@ call :_color2 %_White% "        " %_Green% "Enter a menu option in the Keyboard 
 choice /C:123456 /N
 set _erl=%errorlevel%
 
-if %_erl%==6 exit /b
-if %_erl%==5 goto homepage
-if %_erl%==4 call :readme&goto MainMenu
+if %_erl%==5 exit /b
+if %_erl%==4 goto homepage
 if %_erl%==3 call :_tog_Firewall&goto MainMenu
 if %_erl%==2 goto _reset
 if %_erl%==1 goto _activate
@@ -878,6 +872,8 @@ ________________________________________________________________________________
    @ModByPiash (Me)	- Add and fix some missing features.
 
    @vavavr00m  		- Changed set name to prompt for a name
+
+   @LazyDevv		- Added a cute goldfish art in the main menu.
    
 _________________________________
 
