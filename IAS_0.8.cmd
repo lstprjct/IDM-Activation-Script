@@ -207,8 +207,9 @@ call :_color2 %_White% "        " %_Green% "Enter a menu option in the Keyboard 
 choice /C:123456 /N
 set _erl=%errorlevel%
 
-if %_erl%==5 exit /b
-if %_erl%==4 goto homepage
+if %_erl%==6 exit /b
+if %_erl%==5 goto homepage
+if %_erl%==4 goto readme
 if %_erl%==3 call :_tog_Firewall&goto MainMenu
 if %_erl%==2 goto _reset
 if %_erl%==1 goto _activate
