@@ -182,11 +182,11 @@ set _col=%_Yellow%
 )
 		
 
-echo:           ─▀▀▌───────▐▀▀
-echo:           ─▄▀░◌░░░░░░░▀▄        ◇────────────────────◇
-echo:           ▐░░◌░▄▀██▄█░░░▌        IDM Activation Script
-echo:           ▐░░░▀████▀▄░░░▌       ◇────────────────────◇
-echo:           ═▀▄▄▄▄▄▄▄▄▄▄▄▀═
+call :_color2 %_White% "           ─▀▀▌───────▐▀▀"
+call :_color2 %_White% "           ─▄▀░◌░░░░░░░▀▄        ◇────────────────────◇"
+call :_color2 %_White% "           ▐░░◌░▄▀██▄█░░░▌        IDM Activation Script"
+call :_color2 %_White% "           ▐░░░▀████▀▄░░░▌       ◇────────────────────◇"
+call :_color2 %_White% "           ═▀▄▄▄▄▄▄▄▄▄▄▄▀═"
 echo:
 call :_color2 %_White% "        " %_Green% "  Create By Piash"           
 echo:          _____________________________________________  
