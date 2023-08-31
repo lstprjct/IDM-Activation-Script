@@ -182,11 +182,11 @@ set _col=%_Yellow%
 )
 		
 
-echo:           ─▀▀▌───────▐▀▀
-echo:           ─▄▀░◌░░░░░░░▀▄        ◇────────────────────◇
-echo:           ▐░░◌░▄▀██▄█░░░▌        IDM Activation Script
-echo:           ▐░░░▀████▀▄░░░▌       ◇────────────────────◇
-echo:           ═▀▄▄▄▄▄▄▄▄▄▄▄▀═
+call :_color2 %_White% "           ─▀▀▌───────▐▀▀"
+call :_color2 %_White% "           ─▄▀░◌░░░░░░░▀▄        ◇────────────────────◇"
+call :_color2 %_White% "           ▐░░◌░▄▀██▄█░░░▌        IDM Activation Script"
+call :_color2 %_White% "           ▐░░░▀████▀▄░░░▌       ◇────────────────────◇"
+call :_color2 %_White% "           ═▀▄▄▄▄▄▄▄▄▄▄▄▀═"
 echo:
 call :_color2 %_White% "        " %_Green% "  Create By Piash"           
 echo:          _____________________________________________  
@@ -207,8 +207,9 @@ call :_color2 %_White% "        " %_Green% "Enter a menu option in the Keyboard 
 choice /C:123456 /N
 set _erl=%errorlevel%
 
-if %_erl%==5 exit /b
-if %_erl%==4 goto homepage
+if %_erl%==6 exit /b
+if %_erl%==5 goto homepage
+if %_erl%==4 goto readme
 if %_erl%==3 call :_tog_Firewall&goto MainMenu
 if %_erl%==2 goto _reset
 if %_erl%==1 goto _activate
@@ -243,7 +244,7 @@ exit /b
 
 :export
 
-%nul% %_psc% "$f=[io.file]::ReadAllText('!_batp!') -split \":%~1\:.*`r`n\"; [io.file]::WriteAllText('%~2',$f[1].Trim(),[System.Text.Encoding]::ASCII);"
+%nul% %_psc% "$f=[io.file]::ReadAllText('!_batp!') -split \":%~1\:.*`r`n\"; [io.file]::WriteAllText('%~2',$f[1].Trim(),[System.Text.Encoding]::UTF8);"
 exit/b
 
 ::========================================================================================================================================
