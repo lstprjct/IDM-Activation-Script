@@ -1,19 +1,28 @@
+# Check the instructions here on how to use it https://github.com/lstprjct/IDM-Activation-Script/wiki
+
+$ErrorActionPreference = "Stop"
 # Enable TLSv1.2 for compatibility with older clients
-[System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor [System.Net.SecurityProtocolType]::Tls12
+[Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
 
-$DownloadURL = 'https://raw.githubusercontent.com/lstprjct/IDM-Activation-Script/main/IAS_0.8.cmd'
+$DownloadURL = 'https://raw.githubusercontent.com/lstprjct/IDM-Activation-Script/main/IAS.cmd'
 
-$FilePath = "$env:TEMP\IAS.cmd"
+$rand = Get-Random -Maximum 99999999
+$isAdmin = [bool]([Security.Principal.WindowsIdentity]::GetCurrent().Groups -match 'S-1-5-32-544')
+$FilePath = if ($isAdmin) { "$env:SystemRoot\Temp\IAS_$rand.cmd" } else { "$env:TEMP\IAS_$rand.cmd" }
 
 try {
-    Invoke-WebRequest -Uri $DownloadURL -UseBasicParsing -OutFile $FilePath
-} catch {
-    Write-Error $_
-	Return
+    $response = Invoke-WebRequest -Uri $DownloadURL -UseBasicParsing
+}
+catch {
+    $response = Invoke-WebRequest -Uri $DownloadURL2 -UseBasicParsing
 }
 
-if (Test-Path $FilePath) {
-    Start-Process $FilePath -Wait
-    $item = Get-Item -LiteralPath $FilePath
-    $item.Delete()
-}
+$ScriptArgs = "$args "
+$prefix = "@REM $rand `r`n"
+$content = $prefix + $response
+Set-Content -Path $FilePath -Value $content
+
+Start-Process $FilePath $ScriptArgs -Wait
+
+$FilePaths = @("$env:TEMP\IAS*.cmd", "$env:SystemRoot\Temp\IAS*.cmd")
+foreach ($FilePath in $FilePaths) { Get-Item $FilePath | Remove-Item }
