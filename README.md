@@ -1,127 +1,120 @@
 # IDM Activation Script
-_________________________________
+An open-source tool to activate and reset the trial of [Internet Download Manager](https://www.internetdownloadmanager.com/)
 
-###   Activation:
-_________________________________
+# Disclaimer
+I want to clarify that I am not the original author of this script. When I initially published this script on GitHub, the primary author had not yet created an official GitHub repository. As a result, the only available option for users was to visit the [official forum](https://www.nsaneforums.com/topic/371047--/?do=findComment%5E&comment=1578647) to download and utilize the script. My main aim in creating this repository was to streamline the process for users. Furthermore, I ensured to credit the original creators of the script as a sign of respect for their work.
 
- - This script applies the registry lock method to activate the Internet Download Manager (IDM).
+# Features
+* IDM freeze trial and activation with registry key lock method
+* Activation and trial persist even after installing IDM updates
+* IDM trial reset
+* Fully open source
+* Based on the transparent batch script
 
- - This method requires Internet at the time of activation.
+# IAS Latest Release
+Last Release - v1.2 (12-Feb-2024)
+[GitHub](https://github.com/lstprjct/IDM-Activation-Script)
 
- - IDM updates can be installed directly without having to activate again.
+# Download / How to use it?
+First fresh install [Internet Download Manager](https://www.internetdownloadmanager.com/). Make sure previous cracks/patches are removed/uninstalled if there are any.
+After that follow the below steps to activate it.
 
- - After the activation, if in some cases, the IDM starts to show an activation nag screen, 
-   then just run the activation option again.
+# Note
+* 📌 The activation option is currently not working in the script, use the Freeze trial option to lock the 30-day trial period for the lifetime.
 
-_________________________________
+# Method 1 - PowerShell
+(Recommended)
 
-###   Reset IDM Activation / Trial:
-_________________________________
+* Right-click on the Windows start menu and select PowerShell or Terminal (Not CMD).
+* Copy-paste the below code and press enter
+*`iex(irm is.gd/idm_reset)`
+* You will see the activation options, follow the on-screen instructions.
+* That’s all.
 
- - The Internet Download Manager provides 30 days trial period, you can use this script to 
-   reset this Activation / Trial period whenever you want.
- 
- - This option also can be used to restore status if in case the IDM reports a fake serial
-   key and other similar errors.
+# Method 2 - Traditional
 
-_________________________________
+* Download the file from [GitHub](https://github.com/lstprjct/IDM-Activation-Script/archive/refs/heads/main.zip)
+* Right-click on the downloaded zip file and extract
+* In the extracted folder, run the file named `IAS.cmd`
+* You will see the activation options, and follow onscreen instructions.
+* That’s all.
 
-###   OS requirement: Windows 7, 8, 8.1, 10 & 11
-_________________________________
+# Info
+## Freeze Trial
+* IDM provides a 30-day trial period, you can use this option in the script to lock this trial period for the lifetime so that you won’t have to reset the trial again and your trial won’t expire.
+* This method requires the Internet at the time of applying this option.
+* IDM updates can be installed directly without having to freeze it again.
 
-##   How to use it?
+## Activation
+(***Currently not working**)
 
-###   PowerShell
+* This script applies the registry lock method to activate the Internet download manager (IDM).
+* This method requires the Internet at the time of activation.
+* IDM updates can be installed directly without having to activate it again.
+* After the activation, if in some cases, IDM starts to show an activation nag screen, then just run the activation option again without using the reset option.
 
-On Windows 10/11, right-click on the windows start menu and select PowerShell or Terminal.
+## Reset IDM Activation / Trial
+* Internet download manager provides a 30-day trial period, you can use this script to reset this Activation / Trial period whenever you want.
+* This option also can be used to restore status if in case IDM reports a fake serial key and other similar errors.
 
-Copy-paste the below code and press enter:
+## OS requirement
+* The project is supported for Windows 7/8/8.1/10/11 and their Server equivalent.
+* The PowerShell method to run IAS is supported on Windows 8 and higher.
 
-```
-iex(irm is.gd/idm_reset)
-```
-or
-```
-iwr -useb https://raw.githubusercontent.com/lstprjct/IDM-Activation-Script/main/IAS.ps1 | iex
-```
+## Advanced Info
+* To activate in unattended mode, run the script with the /act parameter.
+* To freeze the trial in unattended mode, run the script with the /frz parameter.
+* To reset in unattended mode, run the script with the /res parameter.
 
-You will see the activation options, and follow onscreen instructions.
+# How does it work?
+* IDM stores the data related to trial and activation across various registry keys. Some of these keys are locked to protect them from tampering and data is stored in a pattern to track the fake serial issue and the remaining trial days. To activate it, the script here simply generates those registry keys by triggering a few downloads in IDM, identifies those registry keys, and locks them so IDM can’t edit and view them. That way IDM cannot show the warning that it’s activated with a fake serial key.
 
-That's all.
-_________________________________
+# Troubleshoot
+* Browser Integration Fix: [Chrome](https://www.internetdownloadmanager.com/register/new_faq/bi9.html) - [Firefox](https://www.internetdownloadmanager.com/register/new_faq/bi4.html)
+* Reach out to us on [Telegram](https://t.me/ModByPiash) with an error screenshot.
+[![](https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/512px-Telegram_logo.svg.png)](https://t.me/ModByPiash)
 
- - Project is supported only for Windows 7/8/8.1/10/11 and their Server equivalent.
+# Changelog
+## v1.2
+* Added back activation option with a randomized name, email, and key in registration details along with a warning that it’s not working for some users, the recommended option is to use Freeze trial.
+## v1.1
+* IDM update 6.42b3 has started showing fake serial popups with IAS activation, due to this we have removed the activation option and replaced it with the Freeze trial option to lock the 30-day trial period for the lifetime.
+* Now the script will disable quick-edit in CMD windows using Powershell instead of editing the registry, thanks to @abbodi1406 for the code and @awuctl for the idea.
+* Code to relaunch script with conhost.exe to avoid terminal app is now merged in quick-edit disable code, thanks to @abbodi1406.
+Updated full code from [WindowsAddict ](https://massgrave.dev/idm-activation-script)
+## v1.0
+* Added the code to relaunch the script with conhost.exe if the script is running from the terminal app.
+* Fixed an issue in getting the current user account SID.
+## v0.9
+* Fixed an issue where the script can not activate and reset IDM in non-admin user accounts.
+* Fixed an issue where the script incorrectly shows that IDM is activated.
+* Fixed an issue where a fake serial pop-up may appear. The script will also show the info to run the activation option again without using the reset option.
+* IDM registry scanning and locking code is now written in Powershell.
+* The script update checker code is added to the script.
+* The script will now disable quick edit mode temporarily because users often click inside the script window and it pauses the script.
+* The script will back up the CLSISD registry keys before performing operations on them.
+* Many error checks are added to better identify the issues.
+## v0.8
+* Move the project to [Github](https://github.com/lstprjct/IDM-Activation-Script)
+* Minor bug fixes
+* Add info to inform users that empty registry keys are being deleted when the script deletes a lot of them
 
-_________________________________
+# Screenshots
+![IAS](https://github.com/lstprjct/IDM-Activation-Script/assets/88411318/fafdb481-c497-464f-b1e6-9a4254eaf880)
 
-### - Advanced Info:
-_________________________________
+![IAS_Freeze_Trial](https://github.com/lstprjct/IDM-Activation-Script/assets/88411318/76b36582-8cf4-4d1e-870f-6e8e57c80a87)
 
-   - To add a custom name in IDM license info, edit line number 5 in the script file.
-   - For activation in unattended mode, run the script with /act parameter.
-   - For reset in unattended mode, run the script with /res parameter.
-   - To enable silent mode with the above two methods, run the script with /s parameter.
+# Credits
 
-Possible accepted values,
+|                                             |                                                                                                                                                                                                                                        |
+|-------------------|-----------------------------------------------------|
+| Dukun Cabul                                 | Original researcher of this IDM trial reset and activation logic, made an Autoit tool for these methods, [IDM-AIO_2020_Final](https://nsaneforums.com/topic/371047-discussion-internet-download-manager-fixes/page/8/#comment-1632062) |
+| AveYo aka BAU                               | [reg_own lean and mean snippet](https://pastebin.com/XTPt0JSC)                                                                                                                                                                         |
+| [abbodi1406](https://github.com/abbodi1406) | Help in coding                                                                                                                                                                                                                         |
+| WindowsAddict                               | IAS Author                                                                                                                                                                                                                             |
 
-"IAS_xxxxxxxx.cmd" /act
-"IAS_xxxxxxxx.cmd" /res
-"IAS_xxxxxxxx.cmd" /act /s
-"IAS_xxxxxxxx.cmd" /res /s
+And thanks to the IAS users for their interest, feedback, and assistance.
 
-_________________________________
+------------------------------------------------------------------------
 
-### - Troubleshooting steps:
-_________________________________
-
-   - If any other activator was used to activate IDM previously then make sure to properly
-     uninstall it with that same activator (if there is an option), this is especially important
-     if any registry/firewall block method was used.
-
-   - Uninstall the IDM from the control panel.
-
-   - Make sure the latest original IDM setup is used for the installation,
-     you can download it from https://www.internetdownloadmanager.com/download.html
-
-   - Now install the IDM and use the activate option in this script if failed then,
-
-     - Disable the windows firewall with the script option, this helps in case of leftover entries of
-       previously used activator (some file patch method also creates firewall entries).
-
-     - Some security programs may block this script, this is false-positive, as long as you 
-       downloaded the file from the original post (mentioned below on this page), temporary suspend
-       Antivirus real-time protection, or exclude the downloaded file/extracted folder from scanning.
-
-     - If you are still facing any issues, please contact me (mentioned below on this page).
-
-____________________________________________________________________________________________________
-
-###   Credits:
-____________________________________________________________________________________________________
-
-   @Dukun Cabul        - Original researcher of this IDM trial reset and activation logic,
-                         made an Autoit tool for these methods, IDM-AIO_2020_Final
-                         nsaneforums.com/topic/371047--/?do=findComment&comment=1632062
-                         
-   @WindowsAddict	     - Ported the above Autoit tool to a batch script
-
-   @AveYo aka @BAU     - Snippet to set registry ownership and permission recursively
-                         pastebin.com/XTPt0JSC
-
-   @abbodi1406         - Awesome batch script tricks and help
-
-   @dbenham            - Set buffer height independently of window height
-                         stackoverflow.com/a/13351373
-
-   @ModByPiash (Me)	   - Add and fix some missing features.
-
-   @vavavr00m          - Changed set name to prompt for a name
-_________________________________
-
-##   IDM Activation Script
- 
- 
-###   Telegram:   https://t.me/ModByPiash
-
-  Forum:   https://www.nsaneforums.com/topic/371047--/?do=findComment^&comment=1578647
-____________________________________________________________________________________________________
+Made with Love ❤️
