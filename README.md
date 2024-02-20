@@ -2,7 +2,7 @@
 An open-source tool to activate and reset the trial of [Internet Download Manager](https://www.internetdownloadmanager.com/)
 
 # Disclaimer
-I want to clarify that I am not the original author of this script. When I initially published this script on GitHub, the primary author had not yet created an official GitHub repository. As a result, the only available option for users was to visit the [official forum](https://www.nsaneforums.com/topic/371047--/?do=findComment%5E&comment=1578647) to download and utilize the script, later they created the Github repo https://github.com/WindowsAddict/IDM-Activation-Script. My main aim in creating this repository was to streamline the process for users. Furthermore, I ensured to credit the original creators of the script as a sign of respect for their work.
+I want to clarify that I am not the original author of this script. When I initially published this script on GitHub, the primary author had not yet created an official GitHub repository. As a result, the only available option for users was to visit the [official forum](https://www.nsaneforums.com/topic/371047--/?do=findComment%5E&comment=1578647) to download and utilize the script, later they created the [Github](https://github.com/WindowsAddict/IDM-Activation-Script) repository. My main aim in creating this repository was to streamline the process for users. Furthermore, I ensured to credit the original creators of the script as a sign of respect for their work.
 
 # Features
 * IDM freeze trial and activation with registry key lock method
@@ -111,7 +111,7 @@ Updated full code from [WindowsAddict ](https://massgrave.dev/idm-activation-scr
 | Dukun Cabul                                 | Original researcher of this IDM trial reset and activation logic, made an Autoit tool for these methods, [IDM-AIO_2020_Final](https://nsaneforums.com/topic/371047-discussion-internet-download-manager-fixes/page/8/#comment-1632062) |
 | AveYo aka BAU                               | [reg_own lean and mean snippet](https://pastebin.com/XTPt0JSC)                                                                                                                                                                         |
 | [abbodi1406](https://github.com/abbodi1406) | Help in coding                                                                                                                                                                                                                         |
-| WindowsAddict                               | Original [IAS Author](https://github.com/WindowsAddict/IDM-Activation-Script)                                                                                                                                                                                                                             |
+| WindowsAddict                               | Original [IAS](https://github.com/WindowsAddict/IDM-Activation-Script) Author                                                                                                                                                                                                                             |
 
 And thanks to the IAS users for their interest, feedback, and assistance.
 
