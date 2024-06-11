@@ -27,7 +27,9 @@ After that follow the below steps to activate it.
 
 * Right-click on the Windows start menu and select PowerShell or Terminal (Not CMD).
 * Copy-paste the below code and press enter
-*`iex(irm is.gd/idm_reset)`
+```
+iwr -useb is.gd/idm_reset | iex
+``` 
 * You will see the activation options, follow the on-screen instructions.
 * That’s all.
 
